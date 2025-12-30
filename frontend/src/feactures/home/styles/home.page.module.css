@@ -1,0 +1,59 @@
+.mainView{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.heroBg {
+    position: absolute;
+    inset: 0; /* truco PRO */
+    width: 100%;
+    background-image: url("/4k-ultra-hd-landscape-wallpaper-sa8ffsciekildmug.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 55px;
+    background: rgb(0, 0, 0, 0.5);
+    z-index: 2;
+
+}
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.logo{
+    width: 35px;
+}
+.textLogo{
+    font-size: 25px;
+    padding-left: 10px;
+}
+.optionsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.option{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.option:hover{
+    transition: all 0.5s ease;
+    background: rgb(0, 0, 0, 0.6);
+}
