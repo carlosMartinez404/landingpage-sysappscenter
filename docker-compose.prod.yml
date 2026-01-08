@@ -6,7 +6,7 @@ services:
     ports:
       - "5173:80"
     networks:
-      -proxy-net
+      - proxy-net
 
 networks:
   proxy-net:
