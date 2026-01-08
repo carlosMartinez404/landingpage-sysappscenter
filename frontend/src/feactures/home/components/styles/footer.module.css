@@ -27,7 +27,7 @@
     height: 40px;
     flex: 0 0 auto;
     animation-name: spinLogo;
-    animation-duration: 10s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
 }
 
@@ -42,6 +42,6 @@
 }
 
 @keyframes spinLogo {
-    0%{transform: rotate(360deg);}
+    5%{transform: rotate(360deg);}
     100%{transform: rotate(-360deg);}
 }
