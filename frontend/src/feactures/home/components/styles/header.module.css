@@ -1,0 +1,57 @@
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    width: 100%;
+    height: 64px;          /* fijo y predecible */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;       /* respiración */
+    border-bottom: 1px solid #E5E7EB;
+    background-color: #FFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    cursor: pointer;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+}
+.namePage{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-left: 5px;
+    line-height: 1.1;
+    color: #111827;
+}
+
+.labelsContainer{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+.labels{
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #111827;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.labels:hover{
+    transform: translateY(-1px); /* mejor que scale en textos */
+    color: #1D4ED8;
+}

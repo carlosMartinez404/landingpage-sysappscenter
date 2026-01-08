@@ -1,59 +1,174 @@
-.mainView{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-.heroBg {
-    position: absolute;
-    inset: 0; /* truco PRO */
-    width: 100%;
-    background-image: url("/4k-ultra-hd-landscape-wallpaper-sa8ffsciekildmug.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-}
-.header{
-    position: relative;
+.root{
     display: flex;
-    justify-content: space-between;
+    min-height: 100dvh;
     width: 100%;
-    height: 55px;
-    background: rgb(0, 0, 0, 0.5);
-    z-index: 2;
+    background-color: #F9FAFB;
+    justify-content: space-between;
+    flex-direction: column;
 
+
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    width: 100%;
+    height: 64px;          /* fijo y predecible */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;       /* respiración */
+    border-bottom: 1px solid #E5E7EB;
+    background-color: #FFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .logoContainer{
     display: flex;
     align-items: center;
-    width: fit-content;
-    height: fit-content;
-    padding: 10px 10px;
+    gap: 12px;
+    min-width: 0;
     cursor: pointer;
 }
 .logo{
-    width: 35px;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
 }
-.textLogo{
-    font-size: 25px;
-    padding-left: 10px;
-}
-.optionsContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-}
-.option{
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: 100;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
+.namePage{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-left: 5px;
+    line-height: 1.1;
+    color: #111827;
 }
 
-.option:hover{
-    transition: all 0.5s ease;
-    background: rgb(0, 0, 0, 0.6);
+.labelsContainer{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+.labels{
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #111827;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.labels:hover{
+    transform: translateY(-1px); /* mejor que scale en textos */
+    color: #1D4ED8;
+}
+
+
+.body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100dvh - 64px); /* ocupa lo que queda bajo el header */
+    padding: 24px 16px;
+}
+
+.titleProyectContainer{
+    width: 100%;
+}
+
+.proyectContainer{
+    display: flex;
+    width: 90%;
+    min-width: 340px;
+    height: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+.cardProyectContainer{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
+    border-radius: 10px;
+    margin: 20px 0px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.imgProyectContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.imgProyect{
+    width: 100px;
+    height: 100px;
+    flex: 0 0 auto;
+    margin-top: 10px;
+}
+
+.infoProyect{
+    width: 100%;
+    padding: 10px 20px;
+}
+.titleProyect{
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.viewProyect,
+.viewProyect:link,
+.viewProyect:visited{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 10px 16px;
+
+    background-color: #2563EB;
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+.viewProyect:hover{
+    transition: all 0.3s ease;
+    transform: translateY(-3px);
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.copyrightContainer{
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.copyright{
+    font-size: 15px;
+    color: #000000;
+    padding: 10px 10px;
 }
