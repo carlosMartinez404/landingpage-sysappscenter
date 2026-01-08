@@ -5,3 +5,9 @@ services:
       dockerfile: Dockerfile.prod
     ports:
       - "5173:80"
+    networks:
+      -proxy-net
+
+networks:
+  proxy-net:
+    external: true
