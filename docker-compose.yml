@@ -1,5 +1,5 @@
 services:
-  frontend:
+  sysapps-center-frontend:
     container_name: sysapps-center-frontend
     restart: unless-stopped
 
