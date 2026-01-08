@@ -1,23 +1,5 @@
 services:
-  sysapps-center-frontend:
-    build:
-      context: ./frontend
-      dockerfile: dockerfile
-    container_name: sysapps-center-frontend-dev
-    ports:
-      - "5173:5173"
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    environment:
-      - NODE_ENV=development
-      - CHOKIDAR_USEPOLLING=true
-      - CHOKIDAR_INTERVAL=100
-    command: npm run dev -- --host 0.0.0.0
-    networks:
-      - SYSAPPS_CENTER_DEV
+  frontend:
+    container_name: sysapps-center-frontend
     restart: unless-stopped
 
-networks:
-  SYSAPPS_CENTER_DEV:
-    driver: bridge
